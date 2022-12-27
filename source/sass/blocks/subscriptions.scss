@@ -1,0 +1,124 @@
+.subscriptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-ghost-white;
+
+  background-image: url("../img/background/weights.png");
+  background-position: 100% 110%;
+  background-repeat: no-repeat;
+  background-size: 288px 490px;
+
+  @media (min-width: $vp-1200) {
+    @include retina {
+      background-image: url("../img/background/weights@2x.png");
+    }
+  }
+
+  @include vp-1199 {
+    background-position: 100% 1459px;
+    background-size: 346px 447px;
+    background-image: url("../img/background/weights-tablet.png");
+
+    @include retina {
+      background-image: url("../img/background/weights-tablet@2x.png");
+    }
+  }
+}
+
+.subscriptions__container {
+  max-width: 1237px;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 220px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 154px;
+  }
+
+  @include vp-767 {
+    padding-top: 63px;
+    padding-bottom: 68px;
+  }
+}
+
+.subscriptions__container h2 {
+  margin: 0 5px 17px 0;
+
+  text-align: center;
+  font-family: $ff-alumnisans;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: $color-sapphire;
+
+  @include vp-1199 {
+    margin: 0 14px 20px 0;
+
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin: 0 11px 20px 0;
+
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.subscriptions__wrapper {
+  position: relative;
+}
+
+.subscriptions__list,
+.subscriptions__sublist {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.subscriptions__sublist {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  display: none;
+
+  &--active {
+    display: flex;
+  }
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+    gap: 37px;
+  }
+
+  @include vp-767 {
+    margin: 37px 0 0 0;
+  }
+}
+
+.subscriptions__sublist.is-not-js {
+  display: flex;
+}
+
+.subscriptions__subitem {
+  flex: 0 0 31%;
+
+  @include vp-1199 {
+    width: 65%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.subscriptions__tabs {
+  width: 100%;
+}
